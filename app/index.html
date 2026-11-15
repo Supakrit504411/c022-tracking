@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F5F7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<title>ขยายเขต C02.2</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="css/app.css?v=9">
+<link rel="stylesheet" href="css/quick.css?v=9">
+<script src="config.js?v=10"></script>
+</head>
+<body>
+
+<!-- ===================== LOGIN ===================== -->
+<section id="login" class="login" hidden>
+  <div id="loginDept">
+    <div class="wordmark"><i class="ti ti-bolt"></i>กฟภ. · C02.2</div>
+    <h1>งานขยายเขต<br>งบผู้ใช้ไฟ</h1>
+    <p class="slogan">ทำขั้นของคุณเสร็จ กดเสร็จแล้ว งานจะไปต่อเอง</p>
+    <p class="login-q">เข้าใช้งานในนามหน่วยงาน</p>
+    <div class="dept-list" id="deptGrid"></div>
+    <button class="admin-link" onclick="UI.pickDept('ADMIN')">เข้าในฐานะผู้ดูแลระบบ</button>
+  </div>
+
+  <div id="loginPin" hidden>
+    <button class="back-link" onclick="UI.loginBack()" id="backLink"></button>
+    <div class="login-dept-chosen" id="loginDeptChosen"></div>
+    <input id="loginName" class="input" placeholder="ชื่อของคุณ (ไม่บังคับ)" autocomplete="name">
+    <div class="pin-dots" id="pinDots"><i></i><i></i><i></i><i></i></div>
+    <div class="pin-pad" id="pinPad"></div>
+    <div class="login-hint" id="loginHint"></div>
+  </div>
+</section>
+
+<!-- ===================== APP ===================== -->
+<div id="app" hidden>
+  <header class="topbar" id="topbar">
+    <div class="topbar-left">
+      <div class="topbar-title" id="topTitle">คิวของฉัน</div>
+      <div class="topbar-sub" id="topSub"></div>
+    </div>
+    <button class="new-btn" id="newBtn" onclick="UI.openNewJob()" hidden></button>
+    <button class="icon-btn" onclick="UI.refresh(true)" aria-label="รีเฟรช" id="refreshBtn"></button>
+    <button class="who" id="avatarBtn" onclick="UI.openMenu()" aria-label="เมนู"></button>
+  </header>
+
+  <div id="demoBanner" class="demo-line" hidden>โหมดทดลอง: ข้อมูลเก็บอยู่ในเครื่องนี้เท่านั้น</div>
+
+  <main id="view"></main>
+
+  <nav class="bottom-nav" id="nav"></nav>
+</div>
+
+<div id="scrim" class="scrim" onclick="UI.closeTop()"></div>
+<div id="sheets"></div>
+
+<div id="snack" class="snack" role="status">
+  <span id="snackText"></span>
+  <button id="snackAction" class="snack-btn"></button>
+</div>
+
+<input type="file" id="photoInput" accept="image/*" capture="environment" hidden>
+
+<script src="js/flow.js?v=9"></script>
+<script src="js/store.js?v=9"></script>
+<script src="js/app.js?v=9"></script>
+<script src="js/quick.js?v=9"></script>
+</body>
+</html>

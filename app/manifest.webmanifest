@@ -1,0 +1,10 @@
+{
+  "name": "งานขยายเขต C02.2",
+  "short_name": "ขยายเขต",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F4F5F7",
+  "theme_color": "#F4F5F7",
+  "lang": "th",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}
