@@ -4,6 +4,13 @@
 
 แอปใหม่ทำตามผัง `Flowchart งานขยายเขตงบผู้ใช้ไฟ C02.2.pdf` (14 ขั้น 7 หน่วยงาน) โดยนำแนวคิดจากโปรเจค `24-คำร้อง` มาลดขั้นตอนลง และออกแบบให้ใช้บนมือถือเป็นหลัก
 
+## ที่อยู่ใช้งานจริง
+
+- หน้าเว็บ: https://c022-tracking.vercel.app (Vercel โปรเจค `c022-tracking`)
+- โค้ด: https://github.com/Supakrit504411/c022-tracking (private)
+- push ขึ้น `main` แล้ว Vercel จะอัปเดตเว็บให้เอง (ใช้ `vercel.json` เสิร์ฟโฟลเดอร์ `app/`)
+- แก้ `backend/Code.gs` แล้วต้องไปวางใน Apps Script และ Deploy → New version เอง
+
 ## ลองใช้ทันที (โหมดทดลอง ไม่ต้องตั้งค่าอะไร)
 
 ```bash
